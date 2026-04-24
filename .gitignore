@@ -7,8 +7,7 @@ LocalHollowing/mimi_key.h
 LocalHollowing/resolve.h
 
 # Binaires et payloads
-*.bin
-*.exe
+
 *.obj
 
 # Fichiers temporaires Office
