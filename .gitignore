@@ -1,0 +1,20 @@
+# Artefacts générés par la pipeline
+output/
+input/
+
+# Headers auto-générés (contiennent la clé AES)
+LocalHollowing/mimi_key.h
+LocalHollowing/resolve.h
+
+# Binaires et payloads
+*.bin
+*.exe
+*.obj
+
+# Fichiers temporaires Office
+~$*
+
+# Build VS
+x64/
+*.user
+.vs/

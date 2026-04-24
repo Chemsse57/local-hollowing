@@ -1,0 +1,200 @@
+{
+  "functions": [
+    {
+      "name": "GetProcAddress",
+      "dll": "kernel32.dll",
+      "return_type": "FARPROC",
+      "calling_convention": "WINAPI",
+      "params": ["HMODULE", "LPCSTR"]
+    },
+    {
+      "name": "LoadLibraryA",
+      "dll": "kernel32.dll",
+      "return_type": "HMODULE",
+      "calling_convention": "WINAPI",
+      "params": ["LPCSTR"]
+    },
+    {
+      "name": "VirtualAlloc",
+      "dll": "kernel32.dll",
+      "return_type": "LPVOID",
+      "calling_convention": "WINAPI",
+      "params": ["LPVOID", "SIZE_T", "DWORD", "DWORD"]
+    },
+    {
+      "name": "VirtualProtect",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["LPVOID", "SIZE_T", "DWORD", "PDWORD"]
+    },
+    {
+      "name": "CreateThread",
+      "dll": "kernel32.dll",
+      "return_type": "HANDLE",
+      "calling_convention": "WINAPI",
+      "params": ["LPSECURITY_ATTRIBUTES", "SIZE_T", "LPTHREAD_START_ROUTINE", "LPVOID", "DWORD", "LPDWORD"]
+    },
+    {
+      "name": "ResumeThread",
+      "dll": "kernel32.dll",
+      "return_type": "DWORD",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE"]
+    },
+    {
+      "name": "SuspendThread",
+      "dll": "kernel32.dll",
+      "return_type": "DWORD",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE"]
+    },
+    {
+      "name": "GetThreadContext",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE", "LPCONTEXT"]
+    },
+    {
+      "name": "SetThreadContext",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE", "const CONTEXT*"]
+    },
+    {
+      "name": "GetCurrentThread",
+      "dll": "kernel32.dll",
+      "return_type": "HANDLE",
+      "calling_convention": "WINAPI",
+      "params": ["void"]
+    },
+    {
+      "name": "GetCurrentProcess",
+      "dll": "kernel32.dll",
+      "return_type": "HANDLE",
+      "calling_convention": "WINAPI",
+      "params": ["void"]
+    },
+    {
+      "name": "DuplicateHandle",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE", "HANDLE", "HANDLE", "LPHANDLE", "DWORD", "BOOL", "DWORD"]
+    },
+    {
+      "name": "CloseHandle",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE"]
+    },
+    {
+      "name": "WaitForSingleObject",
+      "dll": "kernel32.dll",
+      "return_type": "DWORD",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE", "DWORD"]
+    },
+    {
+      "name": "SleepEx",
+      "dll": "kernel32.dll",
+      "return_type": "DWORD",
+      "calling_convention": "WINAPI",
+      "params": ["DWORD", "BOOL"]
+    },
+    {
+      "name": "TerminateProcess",
+      "dll": "kernel32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HANDLE", "UINT"]
+    },
+    {
+      "name": "CryptAcquireContextW",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTPROV*", "LPCWSTR", "LPCWSTR", "DWORD", "DWORD"]
+    },
+    {
+      "name": "CryptCreateHash",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTPROV", "ALG_ID", "HCRYPTKEY", "DWORD", "HCRYPTHASH*"]
+    },
+    {
+      "name": "CryptHashData",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTHASH", "const BYTE*", "DWORD", "DWORD"]
+    },
+    {
+      "name": "CryptDeriveKey",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTPROV", "ALG_ID", "HCRYPTHASH", "DWORD", "HCRYPTKEY*"]
+    },
+    {
+      "name": "CryptDecrypt",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTKEY", "HCRYPTHASH", "BOOL", "DWORD", "BYTE*", "DWORD*"]
+    },
+    {
+      "name": "CryptReleaseContext",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTPROV", "DWORD"]
+    },
+    {
+      "name": "CryptDestroyHash",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTHASH"]
+    },
+    {
+      "name": "CryptDestroyKey",
+      "dll": "advapi32.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HCRYPTKEY"]
+    },
+    {
+      "name": "InternetOpenA",
+      "dll": "wininet.dll",
+      "return_type": "HINTERNET",
+      "calling_convention": "WINAPI",
+      "params": ["LPCSTR", "DWORD", "LPCSTR", "LPCSTR", "DWORD"]
+    },
+    {
+      "name": "InternetOpenUrlA",
+      "dll": "wininet.dll",
+      "return_type": "HINTERNET",
+      "calling_convention": "WINAPI",
+      "params": ["HINTERNET", "LPCSTR", "LPCSTR", "DWORD", "DWORD", "DWORD_PTR"]
+    },
+    {
+      "name": "InternetReadFile",
+      "dll": "wininet.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HINTERNET", "LPVOID", "DWORD", "LPDWORD"]
+    },
+    {
+      "name": "InternetCloseHandle",
+      "dll": "wininet.dll",
+      "return_type": "BOOL",
+      "calling_convention": "WINAPI",
+      "params": ["HINTERNET"]
+    }
+  ]
+}
